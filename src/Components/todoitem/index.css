@@ -1,0 +1,45 @@
+.App-todo__item {
+  display: flex;
+  width: 400px;
+  min-height: 50px;
+  margin: 10px;
+  padding: 10px 10px;
+  border: 2px solid rgb(232, 195, 12);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+}
+
+.App-label-checkbox {
+  margin: 0 5px;
+}
+
+#App-checkbox {
+  display: none;
+  margin: 0;
+}
+
+.App-checkbox-fake {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  background: #e3b873;
+  color: #fff;
+  justify-content: center;
+}
+
+.App-checkbox-fake::before {
+  content: "\2714";
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#App-checkbox:checked + .App-checkbox-fake::before {
+  opacity: 1;
+  background: #e3b873;
+}
